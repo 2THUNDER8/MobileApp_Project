@@ -1,0 +1,44 @@
+body {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 15px 15px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+#keyboard1 {
+  padding: 3px;
+}
+
+#keys1 {
+  width: 40px;
+}
+
+#keys2 {
+  width: 80px;
+}
+
+#keys3 {
+  width: 100px;
+}
+
+#keyboard2 {
+  padding: 3px;
+}
+
+#keyboard3 {
+  padding: 3px;
+}
+
+#keyboard4 {
+  padding: 3px;
+}
+
+#keyboard5 {
+  padding: 3px;
+}
+
+#words {
+  width: 111.5px;
+  height: 35px;
+  padding: 20px;
+}
