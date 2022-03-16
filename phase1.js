@@ -52,9 +52,10 @@ function addChar(selection) {
 
 //saves value to console
 function enter() {
-    var content = $("#w3review").val();
-    console.log(content);
-    $("#w3review").val("");
+    var currChars = $("#w3review").val();
+
+
+    $("#w3review").val(currChars.concat("                                                                                                      "));
 }
 
 //removes all text in text area
