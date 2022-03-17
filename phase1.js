@@ -62,3 +62,18 @@ function enter() {
 function cancel() {
     $("#w3review").val("");
 }
+// var x = $("#w3review").val();
+// function save() {
+
+//     localStorage.setItem("x", JSON.stringify(x));
+// }
+// document.addEventListener("click", function () {
+//     x.innerHTML = JSON.parse(localStorage.getItem("x"));
+// });
+
+function save() {
+
+    var content = $("#w3review").val();
+    console.log(content);
+    $("#w3review").val(content);
+}
