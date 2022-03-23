@@ -1,3 +1,4 @@
+// @ts-nocheck
 //javascript code for blog app
 
 let z = document.getElementById("CH1");
@@ -67,3 +68,4 @@ function save() {
 
   $.post("/save", { data: data });
 }
+
