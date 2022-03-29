@@ -59,7 +59,7 @@ const Keyboard = {
 
         keyLayout.forEach(key => {
             const keyElement = document.createElement("button");
-            const insertLineBreak = ["backspace", "p", "enter", "$", "shift",].indexOf(key) !== -1;
+            const insertLineBreak = ["backspace", "$", "p", "enter", "shift",].indexOf(key) !== -1;
 
             // Add attributes/classes
             keyElement.setAttribute("type", "button");
@@ -76,7 +76,7 @@ const Keyboard = {
                     });
 
                     break;
-                
+
                 case "shift":
                     keyElement.classList.add("keyboard__key--wide", "keyboard__key--dark");
                     keyElement.innerHTML = createIconHTML("north");
@@ -196,3 +196,4 @@ const Keyboard = {
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
+
