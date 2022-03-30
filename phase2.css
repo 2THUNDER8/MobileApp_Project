@@ -65,8 +65,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* styling for keyboard */
-#keyB {
+/*styling for keyboard #keyB {
   background-color: #f0f0f0;
   display: inline-block;
   padding: 15px 15px;
@@ -103,6 +102,126 @@ input:checked + .slider:before {
 
 #keyboard5 {
   padding: 3px;
+} */
+.keyboard {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: #fdffff;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("4572_montreal_canadiens-jersey-2021.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0);
+  user-select: none;
+  transition: bottom 0.4s;
+  border: 3px solid #000000;
+  border-radius: 10px;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+}
+
+.keyboard__key:hover {
+  transform: scale(1.5);
+  background: rgba(151, 1, 1);
+  transition: 0.5s;
+}
+
+.keyboard__key {
+  height: 50px;
+  width: 50px;
+  max-width: 90px;
+  margin: 6px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background: rgba(209, 1, 1);
+  color: #ffffff;
+  font-size: 1.05rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  position: relative;
+  transition: 0.5s;
+}
+
+.keyboard__key:active {
+  background: rgba(117, 0, 0);
+}
+
+.keyboard__key--wide {
+  width: 12%;
+  background: rgba(0, 72, 206);
+  color: #ffffff;
+}
+
+.keyboard__key--wide:hover {
+  background: rgba(1, 54, 153);
+}
+
+.keyboard__key--wide:active {
+  background: rgba(0, 44, 126);
+}
+
+.keyboard__key--extra-wide {
+  width: 80%;
+  max-width: 515px;
+  position: relative;
+  background: rgba(0, 72, 206);
+  color: #ffffff;
+}
+
+.keyboard__key--extra-wide:hover {
+  width: 100%;
+  max-width: 515px;
+  position: relative;
+  background: rgba(1, 40, 112);
+  color: #ffffff;
+}
+
+.keyboard__key--extra-wide:active {
+  background: rgba(0, 44, 126);
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0);
+  border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+  background: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0);
+}
+
+.keyboard__key--dark:hover {
+  background: rgba(36, 35, 35);
+}
+
+.keyboard__key--dark:active {
+  background: rgba(0, 0, 0);
 }
 
 #words {
@@ -121,5 +240,104 @@ input:checked + .slider:before {
   width: 175px;
   height: 35px;
 }
+#inpBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#b1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+#keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#keyboard2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#keyboard3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#keyboard4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+#customAlert {
+  visibility: hidden;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  z-index: 999;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#customAlert1 {
+  visibility: hidden;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  z-index: 999;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#customAlert2 {
+  visibility: hidden;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  z-index: 999;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#box {
+  border-radius: 5px;
+  margin-top: 200px;
+  margin-left: 520px;
+  margin-right: 400px;
+  margin-bottom: 400px;
+  height: 150px;
+  width: 500px;
+  text-align: center;
+  box-shadow: 2px 2px 8px black;
+  background-color: white;
+}
+.heading {
+  background-color: red;
+  color: white;
+  font-size: larger;
+  padding: 5px;
+}
+.content {
+  margin-top: 30px;
+}
+#confirmbtn {
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  background-color: #339966;
+  color: white;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 10px;
+}
