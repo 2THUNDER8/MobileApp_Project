@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="setup()" >
 
 
     <!--Text area-->
@@ -46,7 +46,17 @@
             Undo
         </button>
     </div>
-    </div>
+
+    <div class="card">
+        <h5 class="card-header" style="color: white">Word Bank</h5>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control"  placeholder="Type a word into the word bank" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="save-wordbank" style="color: white">Save</span>
+          </div>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
     <Script>
         document.getElementById("keyB").style.visibility = "Hidden";
