@@ -97,19 +97,28 @@ function save() {
 }
 
 function showWar() {
-    document.getElementById("customAlert").style.visibility = "visible";
+    document.getElementById("customAlert").style.display = "block";
 
 }
 function showWar1() {
-    document.getElementById("customAlert1").style.visibility = "visible";
+    document.getElementById("customAlert1").style.display = "block";
 
 }
 
 function showWar2() {
-    document.getElementById("customAlert2").style.visibility = "visible";
+    document.getElementById("customAlert2").style.display = "block";
 
 }
 function hidealert() {
 
-    document.getElementById("customAlert").style.visibility = "hidden";
+    document.getElementById("customAlert").style.display = "none";
 }
+function hideWar1() {
+    hidealert();
+    document.getElementById("customAlert1").style.display = "none";
+}
+function hideWar2() {
+    hidealert();
+    document.getElementById("customAlert2").style.display = "none";
+}
+
