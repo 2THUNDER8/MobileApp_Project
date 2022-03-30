@@ -275,8 +275,7 @@ input:checked + .slider:before {
 } */
 
 #customAlert {
-  visibility: hidden;
-
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -287,7 +286,7 @@ input:checked + .slider:before {
   background-color: rgba(255, 255, 255, 0.1);
 }
 #customAlert1 {
-  visibility: hidden;
+  display: none;
 
   position: fixed;
   top: 0px;
@@ -299,7 +298,7 @@ input:checked + .slider:before {
   background-color: rgba(255, 255, 255, 0.1);
 }
 #customAlert2 {
-  visibility: hidden;
+  display: none;
 
   position: fixed;
   top: 0px;
@@ -340,4 +339,25 @@ input:checked + .slider:before {
   cursor: pointer;
   margin-top: 0px;
   margin-left: 10px;
+}
+#confirmbtn1 {
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  background-color: rgb(247, 26, 26);
+  color: white;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+#confirmbtn:hover {
+  transform: scale(1.5);
+  background: #339966;
+  transition: 0.5s;
+}
+#confirmbtn1:hover {
+  transform: scale(1.5);
+  background: rgb(247, 26, 26);
+  transition: 0.5s;
 }
