@@ -11,60 +11,278 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="phase2.css" />
-    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="jquery-3.6.0.js"></script>
-    <script src="./phase1express.js">
+    <!-- <script src="./phase1express.js"> </script> -->
 
-    </script>
-    <script src="phase1.js"></script>
-    <script src="keyboard.js"></script>
 
+    <script src="./phase1.js"></script>
+    <script src="./keyboard.js"></script>
+
+    <!--
+    <script src="./OneServer.js"></script>
+    <script src="./phase2Server.js"></script>
+    -->
 </head>
 
-<body onload="setup()" >
+<body>
+    <div class="m-2" id="d2">
+        <div class="row">
+            <!--Table heads-->
+            <div class="col-sm-3" style="text-align:center">Blog Name</div>
+            <div class="col-sm-3"> Edit</div>
+            <div class="col-sm-3">Publish</div>
+        </div>
 
+        <!--Blog name input field-->
+        <div class="row">
 
-    <!--Text area-->
-    <div class="m-2">
+            <div class="col-sm-3" style="text-align:center">
+                1
+            </div>
+
+            <!--Sliders-->
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="CH1">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="vis()">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="s1">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+            </div>
+        </div>
+
+        <!--Blog name input field-->
+        <div class="row">
+            <div class="col-sm-3" style="text-align:center">
+                2
+            </div>
+
+            <!--Sliders-->
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="CH2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="vis()">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="s2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+            </div>
+        </div>
+
+        <!--Blog name input field-->
+        <div class="row">
+            <div class="col-sm-3" style="text-align:center">
+                3
+            </div>
+
+            <!--Sliders-->
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="CH3">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="vis()">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-check form-switch" id="s3">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="inpBlock">
+        <textarea id=" w3review" rows="8" cols="60" style="font-size: 150%"> </textarea>
+        Save button
+    </div>
+    <div class="m-2" id="b1">
+        <button type="button" onclick="save()" class="btn btn-danger">
+            Save
+        </button>
+        cancel button
+        <button type="button" class="btn btn-warning" onclick="cancel()">
+            Cancel
+        </button>
+    </div>
+    <Script>
+        // document.getElementById("keyB").style.display = " None";
+        document.getElementById("inpBlock").style.visibility = "Hidden";
+        document.getElementById("b1").style.visibility = "Hidden";
+    </Script> -->
+
+    <div class="m-2" id="inpBlock">
         <textarea id="w3review" rows="8" cols="74"> </textarea>
     </div>
 
     <!--save button-->
-    <div class="m-2">
-        <button type="button" onclick="save()" class="btn btn-danger">
+    <div class="m-2" id="b1">
+
+        <button type="button" onclick="showWar()" class="btn btn-danger">
             Save
         </button>
 
+        <div id="customAlert">
+            <div id="box">
+                <div class="heading">
+                    custom alert.
+
+                </div>
+                <div class="content">
+                    <p>Are you Sure?</p>
+                    <button type=" button" id="confirmbtn1" onclick="hidealert()">Cancel</button>
+                    <button type=" button" id="confirmbtn" onclick="showWar1()">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div id="customAlert1">
+            <div id="box">
+                <div class="heading">
+                    custom alert.
+
+                </div>
+                <div class="content">
+                    <p>Are you Sure? Really</p>
+                    <button type=" button" id="confirmbtn" onclick="hideWar1()">Cancel</button>
+                    <button type=" button" id="confirmbtn1" onclick="save()">Continue</button>
+                </div>
+            </div>
+        </div>
+
         <!--cancel button-->
-        <button type="button" class="btn btn-primary" onclick="cancel()">
+        <button type="button" class="btn btn-primary" onclick="showWar()">
             Cancel
         </button>
+        <div id="customAlert">
+            <div id="box">
+                <div class="heading">
+                    custom alert.
+
+                </div>
+                <div class="content">
+                    <p>Are you Sure? Really</p>
+                    <button type=" button" id="confirmbtn1" onclick="hidealert()">Cancel</button>
+                    <button type=" button" id="confirmbtn" onclick="showWar2()">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div id="customAlert2">
+            <div id="box">
+                <div class="heading">
+                    custom alert.
+
+                </div>
+                <div class="content">
+                    <p>Are you Sure?</p>
+                    <button type=" button" id="confirmbtn1" onclick="hideWar2()">Cancel</button>
+                    <button type=" button" id="confirmbtn" onclick="cancel()">Continue</button>
+                </div>
+            </div>
+        </div>
 
         <button type="button" class="btn btn-danger" onclick="undo()">
             Undo
         </button>
     </div>
 
-    <div class="card">
-        <h5 class="card-header" style="color: white">Word Bank</h5>
+    <div class="card" id="b2">
+        <h5 class="card-header" style="background-color: red; color: white;">Word Bank</h5>
         <div class="input-group mb-3">
-            <input type="text" class="form-control"  placeholder="Type a word into the word bank" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <span class="input-group-text" id="save-wordbank" style="color: white">Save</span>
-          </div>
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            <input type="text" class="form-control" placeholder="Type a word into the word bank"
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <button class="input-group-text" id="save-wordbank"
+                style="background-color: blue; color: white;">Save</button>
         </div>
-      </div>
+        <div class="card-body">
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
 
     <Script>
-        document.getElementById("keyB").style.visibility = "Hidden";
+        // document.getElementById("keyB").style.display = " None";
         document.getElementById("inpBlock").style.visibility = "Hidden";
+        document.getElementById("b1").style.visibility = "Hidden";
+        document.getElementById("b2").style.visibility = "Hidden";
     </Script>
+    <!-- <div id="keyB" class="m-2">
+        <div id="keyboard">
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('1')">1</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('2')">2</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('3')">3</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('4')">4</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('5')">5</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('6')">6</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('7')">7</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('8')">8</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('9')">9</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('0')">0</a>
+            <a data-role="button" id="keys2" class="keyboard__key" onclick="toTrue()">
+                <i class="bi-arrow-up-short"></i>
+            </a>
+        </div>
+        <div id="keyboard2">
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('q')">Q</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('w')">W</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('r')">R</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('t')">T</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('y')">Y</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('u')">U</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('e')">E</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('i')">I</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('o')">O</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('p')">P</a>
+            <a data-role="button" id="keys2" class="btn btn-dark" onclick="addChar('bksp')">
+                <i class="bi-arrow-left"></i>
+            </a>
+        </div>
+        <div id="keyboard3">
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('a')">A</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('s')">S</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('d')">D</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('f')">F</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('g')">G</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('h')">H</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('j')">J</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('k')">K</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('l')">L</a>
+            <a data-role="button" id="keys2" class="btn btn-dark" onclick="enter()">Enter</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick='addChar("\"")'>"</a>
+        </div>
+        <div id="keyboard4">
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('z')">Z</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('x')">X</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('c')">C</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('v')">V</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('b')">B</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('n')">N</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('m')">M</a>
+            <a data-role="button" id="keys2" class="keyboard__key--extra-wide" onclick="addChar(' ')">Space</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('.')">.</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar('?')">?</a>
+            <a data-role="button" id="keys1" class="keyboard__key" onclick="addChar(',')">,</a>
+        </div>
+    </div> -->
 
-    <!--Keyboard-->
-
+    <!-- <div id="keyboard5">
+            <a data-role="button" id="keys3" class="btn btn-outline-primary" onclick="addChar('')">Word
+                <i class="bi-piggy-bank"></i>
+            </a>
+            <input type="text" id="words" />
+            <a data-role="button" id="keys1" class="btn btn-outline-primary" onclick="addChar('')">
+                <i class="bi-star"></i>
+            </a>
+            <a data-role="button" id="keys3" class="btn btn-outline-primary" onclick="addChar('')">Word
+                <i class="bi-piggy-bank"></i>
+            </a>
+            <input type="text" id="words" />
+            <a data-role="button" id="keys1" class="btn btn-outline-primary" onclick="addChar('')">
+                <i class="bi-star"></i>
+            </a>
+        </div> -->
+    </div>
 
 
 

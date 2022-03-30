@@ -1,35 +1,48 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
+const blog = ["", "", ""];
 
-//sets port number to enviroment variable PORT or 4000 if undefined
-const port = process.env.PORT || 4000;
-let path = require("path");
+const express = require("express"); // start express application
+const server = express(); // define top level function
+const port = 5500;
 
-app.use(bodyParser.urlencoded({}));
-app.use(express.static(path.join(__dirname)));
+server.use(express.json()); // implement JSON recognition
+server.use(express.urlencoded({ extended: true })); // implement incoming name:value pairs to be any type
 
-//default array
-let blog = "";
+let allowCrossDomain = function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // allow any origin
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE"); // allow any method
+  res.header("Access-Control-Allow-Headers", "Content-Type"); // accept only headers with this type
+  next(); // middleware callback function required for processing
+};
+server.use(allowCrossDomain); // implement allowable domain characteristics
 
-app.get("/", (req, res) => {
+// Upon receiving a get at this url execute callback function
+server.get("/loadall", function (req, res) {
+  console.log(req.url);
+  res.status(200).send(blog);
   res.sendFile(path.join(__dirname, "phase1.html"));
 });
 
-// GET method for the blog data
-app.get("/data", (req, res) => {
-  res.json(blog);
+// Upon receiving a post at this url execute callback function
+server.post("/w3review", function (req, res) {
+  console.log(req.body.name);
+  blog[0] = req.body.name;
+  return res.status(200).send(blog);
 });
 
-// POST method route = input1
-app.post("/save", (req, res) => {
-  blog = req.body.data;
+// Upon receiving a post at this url execute callback function
+// server.post("/t2", function (req, res) {
+//   console.log(req.body.name);
+//   blog[1] = req.body.name;
+//   return res.status(200).send(blog);
+// });
 
-  console.log(blog);
-});
+// // Upon receiving a post at this url execute callback function
+// server.post("/t3", function (req, res) {
+//   console.log(req.body.name);
+//   blog[2] = req.body.name;
+//   return res.status(200).send(blog);
+// });
 
-
-//checks port number
-app.listen(port, () => {
-  console.log(`Server started at port: ${port}`);
+server.listen(port, function () {
+  console.log("Listening on port 5500");
 });
