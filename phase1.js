@@ -101,17 +101,40 @@ function save() {
 }
 
 function saveWordBank() {
-  console.log("hello")
   let wordbank_textarea = $("#w").val();
+  document.getElementById("test").innerHTML = '<a href="#" class="btn btn-primary">'+ wordbank_textarea + '</a>';
+  console.log("hello")
+  
   $.post(SERVER_URL + "/w", { name: wordbank_textarea });
 
+  $("#test").on("click", function () {
+    addChar2(wordbank_textarea);
+  });
+  console.log("work please ddddd");
+
 }
+
+//variable used in addChar2 function
+let beenPressed2 = true;
+
+//logic for word bank
+function addChar2(selection) {
+  // Get the value from the id'ed field
+  var currChars = $("#w").val();
+
+    if (beenPressed2) {
+        $("#w3review").val(currChars.concat(selection));
+    } 
+}
+
 
 function showWar() {
   
     document.getElementById("customAlert").style.display = "block";
 
 }
+
+
 function showWar1() {
   
     document.getElementById("customAlert1").style.display = "block";
@@ -135,3 +158,5 @@ function hideWar2() {
     hidealert();
     document.getElementById("customAlert2").style.display = "none";
 }
+
+
