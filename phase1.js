@@ -89,14 +89,21 @@ function cancel() {
 function save() {
   console.log("hello")
     
-    let input1 = $("#w3review").val();
+    let textarea = $("#w3review").val();
     //let data = input1.val() || "";
 
 
-    $.post(SERVER_URL + "/w3review", { name: input1 });
+    $.post(SERVER_URL + "/w3review", { name: textarea });
 
     vis();
     // window.location.reload();
+
+}
+
+function saveWordBank() {
+  console.log("hello")
+  let wordbank_textarea = $("#w").val();
+  $.post(SERVER_URL + "/w", { name: wordbank_textarea });
 
 }
 

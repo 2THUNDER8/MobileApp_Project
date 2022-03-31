@@ -29,6 +29,12 @@ server.post("/w3review", function (req, res) {
   return res.status(200).send(blog);
 });
 
+server.post("/w", function (req, res) {
+  console.log(req.body.name);
+  blog[1] = req.body.name;
+  return res.status(200).send(blog);
+});
+
 // Upon receiving a post at this url execute callback function
 // server.post("/t2", function (req, res) {
 //   console.log(req.body.name);
