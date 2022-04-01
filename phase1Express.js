@@ -1,3 +1,10 @@
+// this javascript file is the express server that helps to save and load data form server
+/* Authors
+Aliz Dhital 
+Andrew Ali 
+Olorunfemi Adeosun 
+Lisha Tamang 
+*/
 const blog = ["", "", ""];
 
 const express = require("express"); // start express application
