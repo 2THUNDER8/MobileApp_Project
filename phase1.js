@@ -120,10 +120,10 @@ let beenPressed2 = true;
 //logic for word bank
 function addChar2(selection) {
   // Get the value from the id'ed field
-  var currChars = $("#w").val();
+  var currChars = $("#w3review").val();
 
     if (beenPressed2) {
-        $("#w3review").val(currChars.concat(selection));
+        $("#w3review").val(currChars.concat(selection + " "));
     } 
 }
 
