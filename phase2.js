@@ -1,4 +1,10 @@
-//javascript code for blog app
+//javascript code for blog app including functions of buttons and include functions for alert boxes and sliders
+/* Authors
+Aliz Dhital 
+Andrew Ali 
+Olorunfemi Adeosun 
+Lisha Tamang 
+*/
 
 let z = document.getElementById("CH1");
 
