@@ -111,7 +111,7 @@ function saveWordBank() {
   document.getElementById("test").innerHTML = '<a href="#" class="btn btn-primary">'+ wordbank_textarea + '</a>';
   console.log("hello")
   
-  $.post(SERVER_URL + "/w", { name: wordbank_textarea });
+  $.post(SERVER_URL2 + "/w", { name: wordbank_textarea });
 
   $("#test").on("click", function () {
     addChar2(wordbank_textarea);
