@@ -111,17 +111,18 @@ function save() {
 
 }
 function saveWordBank() {
-  let wordbank_textarea = $("#w").val();
-  document.getElementById("test").innerHTML = '<a href="#" class="btn btn-primary">'+ wordbank_textarea + '</a>';
-  console.log("hello")
-  
-  $.post(SERVER_URL2 + "/w", { name: wordbank_textarea });
+    let wordbank_textarea = $("#w").val();
+    document.getElementById("test").innerHTML += '<a href="#" class="btn btn-primary">' + wordbank_textarea + '</a>';
+    console.log("hello")
 
-  $("#test").on("click", function () {
-    addChar2(wordbank_textarea);
-  });
-  console.log("work please ddddd");
+    $.post(SERVER_URL2 + "/w", { name: wordbank_textarea });
 
+    $("#test").on("click", function () {
+        addChar2(wordbank_textarea);
+    });
+    console.log("work please ddddd");
+    $("#w").val("");
+    document.getElementById("w").focus();
 }
 
 //variable used in addChar2 function
