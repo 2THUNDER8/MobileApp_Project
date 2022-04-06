@@ -67,8 +67,12 @@ function undo() {
     var str = $("#w3review").val();
     var lastIndex = str.lastIndexOf(" ");
 
+    // document.getElementById("w3review").innerHTML = str.substring(0, lastIndex);
     $("#w3review").val(str.substring(0, lastIndex));
 
+    document.getElementById("ubtn").addEventListener('click', () => {
+        document.getElementById("w3review").focus();
+    });
 }
 
 
